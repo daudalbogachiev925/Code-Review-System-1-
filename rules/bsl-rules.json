@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {"id": "BSL001", "severity": "minor", "message": "TODO без задачи"},
+    {"id": "BSL002", "severity": "major", "message": "Сообщить() запрещён"},
+    {"id": "BSL003", "severity": "major", "message": "Предупреждение() запрещено"},
+    {"id": "BSL004", "severity": "major", "message": "Магическое число в Ждать"},
+    {"id": "BSL005", "severity": "critical", "message": "Выполнить() небезопасно"},
+    {"id": "BSL009", "severity": "critical", "message": "Hardcoded пароль"}
+  ]
+}
