@@ -1,0 +1,19 @@
+name: PR Reviewon:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Analyze 1C code
+        run: python -m src.analyzer src > analysis.json || true
+      - name: Post PR comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m src.bot ${{ github.repository }} ${{ github.event.pull_request.number }}
