@@ -1,0 +1,10 @@
+{
+  "forbidden": [
+    "Сообщить(", "Предупреждение(", "Отладка.Остановить(", "Выполнить(",
+    "НайтиПоНаименованию("
+  ],
+  "max_module_lines": 2000,
+  "max_complexity": 15,
+  "min_comment_ratio": 5,
+  "max_magic_numbers": 5
+}
